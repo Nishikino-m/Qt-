@@ -42,3 +42,6 @@ RESOURCES += \
 
 RC_FILE += \
      logo.rc
+
+FORMS += \
+    form.ui

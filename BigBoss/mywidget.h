@@ -20,6 +20,7 @@ public:
     void paintEvent(QPaintEvent *);
     void gamestart();
     void helpmenu();
+    void Hidegame();
     ~MyWidget();
 };
 

@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QPushButton>
 #include "subhelpwidget.h"
+#include <QMessageBox>
 class HelpWidget : public QWidget
 {
     Q_OBJECT
@@ -13,6 +14,8 @@ public:
     void show1();
     void show2();
     void show3();
+    void SetButton();
+    void SetSubw();
 
 signals:
 
