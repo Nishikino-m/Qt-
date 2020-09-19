@@ -13,6 +13,7 @@ Login::Login(QWidget *parent) :
         //隐藏按钮边框
         ui->login->setStyleSheet("border:none;");
         ui->exit->setStyleSheet("border:none;");
+        ui->about->setStyleSheet("border:none;");
         //设置图片
         ui->User->setPixmap(QPixmap(":/new/prefix1/Image/User.png"));
         ui->Passw->setPixmap(QPixmap(":/new/prefix1/Image/Clock.png"));
@@ -20,6 +21,7 @@ Login::Login(QWidget *parent) :
         icon.addFile(":/new/prefix1/Image/Login.png");
         ui->login->setIcon(icon);
         ui->exit->setIcon(QPixmap(":/new/prefix1/Image/Exit.png"));
+        ui->about->setIcon(QPixmap(":/new/prefix1/Image/About.png"));
         ui->Username->setPlaceholderText(tr("请输入用户名"));
         ui->Password->setPlaceholderText("请输入密码");
         ui->Password->setEchoMode(QLineEdit::Password);
@@ -31,28 +33,7 @@ Login::~Login()
 {
     delete ui;
 }
-void Login::login()
-{
 
-    //管理员账户密码
-    if(ui->Username->text().trimmed() == tr("admin") && ui->Password->text() == tr("admin"))
-    {
-       QMessageBox::information(this,"Success","登录成功");
-       accept();//关闭窗体，并设置返回值为Accepted
-    }
-    else
-    {
-       QMessageBox::warning(this, tr("Warming"),tr("用户名或密码错误"),QMessageBox::Yes);
-
-       //清空输入框内容
-     //ui->Username->clear(); 保留输入的账号？
-       ui->Password->clear();
-
-       //光标定位
-       ui->Username->setFocus();
-    }
-
-}
 //点击登录
 void Login::on_login_clicked()
 {
@@ -84,7 +65,7 @@ void Login::on_login_clicked()
                        }
                   }
         if(T1==false){
-            QMessageBox::warning(this, tr("Warming"),tr("用户名或密码错误"),QMessageBox::Yes);
+            QMessageBox::warning(this, tr("Warning"),tr("用户名或密码错误"),QMessageBox::Yes);
 
             //清空输入框内容
           //ui->Username->clear(); 保留输入的账号？
@@ -93,10 +74,7 @@ void Login::on_login_clicked()
             //光标定位
             ui->Password->setFocus();
         }
-        else{
-            QMessageBox::information(this,"Success","登录成功");
-            accept();//关闭窗体，并设置返回值为Accepted
-        }
+
  }
 
     if(ui->StudentRadio->isChecked()){
@@ -123,7 +101,7 @@ void Login::on_login_clicked()
                }
 
     if(T2==false){
-        QMessageBox::warning(this, tr("Warming"),tr("用户名或密码错误"),QMessageBox::Yes);
+        QMessageBox::warning(this, tr("Warning"),tr("用户名或密码错误"),QMessageBox::Yes);
 
         //清空输入框内容
       //ui->Username->clear(); 保留输入的账号？
@@ -132,10 +110,6 @@ void Login::on_login_clicked()
         //光标定位
         ui->Password->setFocus();
     }
-    else{
-        QMessageBox::information(this,"Success","登录成功");
-        accept();//关闭窗体，并设置返回值为Accepted
-    }
 
 
     }
@@ -143,4 +117,8 @@ void Login::on_login_clicked()
 void Login::on_exit_clicked()
 {
     this->close();
+}
+void Login::on_about_clicked()
+{
+    QMessageBox::information(this,"介绍","这是基于Qt5.9.2制作的学生管理系统\n\n制作者:林煊 李嘉琳 许瑶琪");
 }

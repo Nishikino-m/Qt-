@@ -13,6 +13,9 @@ Admin_admin::Admin_admin(QWidget *parent) :
     ui(new Ui::Admin_admin)
 {
     ui->setupUi(this);
+    this->setWindowTitle("Admin_admin");
+    QIcon icon;
+    icon.addFile(":/new/prefix1/Image/Admin.png");
     QSqlDatabase db= QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("QtClass.db");
     if (!db.open()){
@@ -23,14 +26,15 @@ Admin_admin::Admin_admin(QWidget *parent) :
     QSqlQuery query;
     query.exec("select admin_account from admin");
         if(!query.next()){
-                query.exec("INSERT INTO admin (admin_account, admin_password) "
-                               "VALUES ('admin','admin')");
+                query.exec("INSERT INTO admin (admin_account, admin_password) "//, admin_else
+                               "VALUES ('admin','admin')");//,'0'
         }
     QSqlQueryModel *model = new QSqlQueryModel(this);
        model->setQuery("select admin_account,admin_password from admin");
 
        model->setHeaderData(0,Qt::Horizontal,tr("账号"));
        model->setHeaderData(1,Qt::Horizontal,tr("密码"));
+      // model->setHeaderData(2,Qt::Horizontal,tr("备注"));
        ui->tableView->setModel(model);
 }
 
@@ -69,7 +73,7 @@ void Admin_admin::on_add_clicked()
                  QMessageBox::information(this, "温馨提示", "添加成功！新增管理员："+wantAddAdminAccount);
                  qDebug()<<wantAddAdminAccount+"添加成功";
               //界面主动刷新
-                 //this->hide();
+                 this->hide();
                  this->close();
                  Admin_admin *newAdminAdminShow=new Admin_admin;
                  newAdminAdminShow->show();

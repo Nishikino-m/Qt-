@@ -25,26 +25,33 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp \
     login.cpp \
-    admin.cpp \
     student.cpp \
     uandp.cpp \
-    admin_admin.cpp
+    admin_admin.cpp \
+    admin.cpp \
+    admin_student.cpp \
+    admin_teacher.cpp \
+    admin_find.cpp
 
 HEADERS += \
-        mainwindow.h \
     login.h \
-    admin.h \
     student.h \
     uandp.h \
-    admin_admin.h
+    admin_admin.h \
+    admin.h \
+    admin_student.h \
+    admin_teacher.h \
+    admin_find.h
 
 FORMS += \
     login.ui \
     student.ui \
     admin_admin.ui \
-    admin.ui
+    admin.ui \
+    admin_student.ui \
+    admin_teacher.ui \
+    admin_find.ui
 
 RC_FILE += \
      logo.rc

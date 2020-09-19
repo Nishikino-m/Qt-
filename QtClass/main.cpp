@@ -1,7 +1,17 @@
-#include "mainwindow.h"
 #include "login.h"
 #include <QApplication>
 #include"admin_admin.h"
+#include <QSqlDatabase>
+#include <QSqlError>
+#include <QDebug>
+#include <QtSql>
+#include <QSqlQuery>
+#include <QSqlQueryModel>
+#include <QMessageBox>
+#include <QClipboard>
+#include <QMenuBar>
+#include <QMenu>
+#include <QAction>
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -16,18 +26,20 @@ int main(int argc, char *argv[])
     query.exec("CREATE TABLE admin ("
                        "admin_account VARCHAR(40) PRIMARY KEY NOT NULL,"
                        "admin_password VARCHAR(40) NOT NULL)");
+                       //"admin_else VARCHAR(40)  NOT NULL)"
 
     //创建数据库student表
         query.exec("CREATE TABLE student ("
                        "id VARCHAR(50) PRIMARY KEY NOT NULL, "
+                       "password VARCHAR(30) NOT NULL"
                        "name VARCHAR(30) NOT NULL, "
+                       "number VARCHAR(30) NOT NULL, "
                        "sex VARCHAR(10) NOT NULL, "
-                       "age INTEGER NOT NULL,"
-                       "address VARCHAR(50) NOT NULL,"
-                       "phone_number VARCHAR(30) NOT NULL,"
-                       "password VARCHAR(30) NOT NULL,"
-                       "dormitory VARCHAR(30) NOT NULL,"
-                       "className VARCHAR(30) NOT NULL)");
+                       "tel VARCHAR(30) NOT NULL, "
+                       "yuanix VARCHAR(50) NOT NULL, "
+                       "zhuanye VARCHAR(30) NOT NULL, "
+                       "qinshi VARCHAR(30) NOT NULL, "
+                       "class VARCHAR(30) NOT NULL)");
 
     //创建数据库class表
     query.exec("CREATE TABLE class ("
@@ -36,20 +48,12 @@ int main(int argc, char *argv[])
                        "instructor VARCHAR(40) NOT NULL, "
                        "instructor_number VARCHAR(40) NOT NULL,"
                         "people_number INTEGER NOT NULL)");
+
+    Login l;
+    l.setWindowTitle("LOGIN");
+    l.show();
     //初始化创建一个管理员账户：admin admin
     Admin_admin *admin_admin=new Admin_admin;
     admin_admin->hide();
-    Login l;
-
-
-
-    l.setWindowTitle("LOGIN");
-    if (l.exec() == QDialog::Accepted)//调用login.exec()，阻塞主控制流，直到完成返回，继续执行主控制流
-    {
-        qDebug()<<"aaa";
-       return a.exec();
-
-    }
-    return 0;
-    //return a.exec();
+    return a.exec();
 }

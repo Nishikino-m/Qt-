@@ -23,6 +23,7 @@ public:
 private slots:
     void on_login_clicked();
     void on_exit_clicked();
+    void on_about_clicked();
 private:
     Ui::Login *ui;
     Admin *admin;//创建管理员界面对象

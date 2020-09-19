@@ -7,5 +7,6 @@
         <file>Image/Exit.png</file>
         <file>Image/Title.png</file>
         <file>Image/Back.jpg</file>
+        <file>Image/Admin.png</file>
     </qresource>
 </RCC>
