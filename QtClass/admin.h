@@ -6,6 +6,7 @@
 #include "admin_admin.h"
 #include "admin_find.h"
 #include "admin_teacher.h"
+#include "headers.h"
 namespace Ui {
 class Admin;
 }

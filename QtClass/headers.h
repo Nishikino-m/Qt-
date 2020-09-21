@@ -1,0 +1,26 @@
+#ifndef HEADERS_H
+#define HEADERS_H
+#include <QDialog>
+#include <QSqlDatabase>
+#include <QSqlError>
+#include <QDebug>
+#include <QtSql>
+#include <QSqlQuery>
+#include <QSqlQueryModel>
+#include <QSqlDatabase>
+#include <QSqlError>
+#include <QMessageBox>
+#include <QClipboard>
+#include <QMenuBar>
+#include <QMenu>
+#include <QAction>
+#include <QDebug>
+#include <QLabel>
+#include <QLineEdit>
+#include <QPushButton>
+#include <QWidget>
+#include <QPushButton>
+#include <QStatusBar>
+#include <QTextEdit>
+#include <QDockWidget>
+#endif // HEADERS_H

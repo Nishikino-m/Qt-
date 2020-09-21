@@ -8,5 +8,8 @@
         <file>Image/Title.png</file>
         <file>Image/Back.jpg</file>
         <file>Image/Admin.png</file>
+        <file>Image/Adminer.jpg</file>
+        <file>Image/find.jpg</file>
+        <file>Image/student.jpg</file>
     </qresource>
 </RCC>

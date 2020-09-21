@@ -1,13 +1,6 @@
 #include "admin_admin.h"
 #include "ui_admin_admin.h"
-#include <QSqlDatabase>
-#include <QSqlError>
-#include <QDebug>
-#include <QtSql>
-#include <QSqlQuery>
-#include <QSqlQueryModel>
-#include <QMessageBox>
-#include <QClipboard>
+#include "headers.h"
 Admin_admin::Admin_admin(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Admin_admin)
@@ -26,8 +19,9 @@ Admin_admin::Admin_admin(QWidget *parent) :
     QSqlQuery query;
     query.exec("select admin_account from admin");
         if(!query.next()){
-                query.exec("INSERT INTO admin (admin_account, admin_password) "//, admin_else
-                               "VALUES ('admin','admin')");//,'0'
+                query.exec("INSERT INTO admin (admin_account, admin_password) "
+                               "VALUES ('admin','admin')");
+                qDebug()<<"ADD A ADMIN";
         }
     QSqlQueryModel *model = new QSqlQueryModel(this);
        model->setQuery("select admin_account,admin_password from admin");
@@ -47,8 +41,8 @@ Admin_admin::~Admin_admin()
 //添加管理员
 void Admin_admin::on_add_clicked()
 {
-    QString wantAddAdminAccount=ui->lineEdit->text();
-    QString wantAddAdminPassword=ui->lineEdit_2->text();
+    QString wantAddAdminAccount=ui->lineEdit->text().trimmed();
+    QString wantAddAdminPassword=ui->lineEdit_2->text().trimmed();
     //判断输入学号是否存在于数据库中
     QSqlQuery query;
     query.exec("select admin_account from admin");

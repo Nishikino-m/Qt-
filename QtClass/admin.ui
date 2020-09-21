@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>462</width>
-    <height>617</height>
+    <width>464</width>
+    <height>621</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,11 +16,17 @@
   <widget class="QWidget" name="widget" native="true">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>110</y>
+     <x>90</x>
+     <y>170</y>
      <width>241</width>
      <height>421</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>方正粗圆宋简体</family>
+     <pointsize>15</pointsize>
+    </font>
    </property>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
@@ -30,6 +36,11 @@
       <width>151</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>方正粗圆宋简体</family>
+     </font>
     </property>
     <property name="text">
      <string>学生信息表</string>
@@ -97,11 +108,40 @@
      <height>51</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>可口可乐在乎体 楷体</family>
+    </font>
+   </property>
    <property name="text">
     <string>TextLabel</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>461</width>
+     <height>621</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="image.qrc">:/new/prefix1/Image/Adminer.jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <zorder>label_2</zorder>
+  <zorder>widget</zorder>
+  <zorder>label</zorder>
  </widget>
- <resources/>
+ <resources>
+  <include location="image.qrc"/>
+ </resources>
  <connections/>
 </ui>

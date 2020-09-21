@@ -1,11 +1,7 @@
 #ifndef LOGIN_H
 #define LOGIN_H
 
-#include <QDialog>
-#include <QLabel>
-#include <QLineEdit>
-#include <QPushButton>
-#include <QMessageBox>
+#include "headers.h"
 #include "admin.h"
 #include "student.h"
 namespace Ui {

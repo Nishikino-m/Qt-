@@ -32,7 +32,11 @@ SOURCES += \
     admin.cpp \
     admin_student.cpp \
     admin_teacher.cpp \
-    admin_find.cpp
+    admin_find.cpp \
+    add_student.cpp \
+    change_student.cpp \
+    change_teacher.cpp \
+    add_teacher.cpp
 
 HEADERS += \
     login.h \
@@ -42,7 +46,12 @@ HEADERS += \
     admin.h \
     admin_student.h \
     admin_teacher.h \
-    admin_find.h
+    admin_find.h \
+    add_student.h \
+    change_student.h \
+    headers.h \
+    change_teacher.h \
+    add_teacher.h
 
 FORMS += \
     login.ui \
@@ -51,7 +60,11 @@ FORMS += \
     admin.ui \
     admin_student.ui \
     admin_teacher.ui \
-    admin_find.ui
+    admin_find.ui \
+    add_student.ui \
+    change_student.ui \
+    change_teacher.ui \
+    add_teacher.ui
 
 RC_FILE += \
      logo.rc

@@ -29,7 +29,7 @@ Admin_Student::Admin_Student(QWidget *parent) :
     model->setHeaderData(6,Qt::Horizontal,tr("联系电话"));
     model->setHeaderData(7,Qt::Horizontal,tr("寝室号"));
     model->setHeaderData(8,Qt::Horizontal,tr("班级号"));
-       ui->tableView->setModel(model);
+    ui->tableView->setModel(model);
 
 }
 

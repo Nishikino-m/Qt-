@@ -62,14 +62,24 @@
   <widget class="QPushButton" name="pushButton_3">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>450</y>
+     <x>240</x>
+     <y>510</y>
      <width>93</width>
      <height>28</height>
     </rect>
    </property>
    <property name="text">
     <string>DEC</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="DeclineEdit">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>510</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
    </property>
   </widget>
  </widget>

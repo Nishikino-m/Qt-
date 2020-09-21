@@ -77,7 +77,7 @@ void Login::on_login_clicked()
 
  }
 
-    if(ui->StudentRadio->isChecked()){
+    else if(ui->StudentRadio->isChecked()){
         QSqlQuery query(db);
         db.exec("SET NAMES 'GBK'");//防止乱码
         query.exec("select id,password from student");
@@ -113,9 +113,14 @@ void Login::on_login_clicked()
 
 
     }
+    else{
+        QMessageBox::warning(this, tr("Warning"),tr("请选择身份"),QMessageBox::Yes);
+    }
+
 }
 void Login::on_exit_clicked()
 {
+    qDebug()<<"EXIT";
     this->close();
 }
 void Login::on_about_clicked()

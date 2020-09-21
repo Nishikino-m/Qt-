@@ -1,18 +1,7 @@
 #ifndef STUDENT_H
 #define STUDENT_H
 
-#include <QDialog>
-#include <QSqlDatabase>
-#include <QSqlError>
-#include <QDebug>
-#include <QtSql>
-#include <QSqlQuery>
-#include <QSqlQueryModel>
-#include <QMessageBox>
-#include <QClipboard>
-#include <QMenuBar>
-#include <QMenu>
-#include <QAction>
+#include "headers.h"
 namespace Ui {
 class Student;
 }

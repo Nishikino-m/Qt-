@@ -2,7 +2,7 @@
 #define ADMIN_ADMIN_H
 
 #include <QDialog>
-
+#include "headers.h"
 namespace Ui {
 class Admin_admin;
 }

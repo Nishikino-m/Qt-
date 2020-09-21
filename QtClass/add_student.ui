@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Student</class>
- <widget class="QWidget" name="Student">
+ <class>Add_Student</class>
+ <widget class="QDialog" name="Add_Student">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>462</width>
-    <height>617</height>
+    <width>524</width>
+    <height>670</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Dialog</string>
   </property>
   <widget class="QWidget" name="widget" native="true">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>50</y>
-     <width>441</width>
-     <height>581</height>
+     <x>10</x>
+     <y>0</y>
+     <width>491</width>
+     <height>661</height>
     </rect>
    </property>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>470</y>
+      <x>340</x>
+      <y>570</y>
       <width>131</width>
       <height>41</height>
      </rect>
@@ -38,14 +38,14 @@
      </font>
     </property>
     <property name="text">
-     <string>修改信息</string>
+     <string>确定添加</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="NamelineEdit">
     <property name="geometry">
      <rect>
       <x>130</x>
-      <y>130</y>
+      <y>170</y>
       <width>211</width>
       <height>31</height>
      </rect>
@@ -55,7 +55,7 @@
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>130</y>
+      <y>170</y>
       <width>41</width>
       <height>31</height>
      </rect>
@@ -74,7 +74,7 @@
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>80</y>
+      <y>70</y>
       <width>41</width>
       <height>31</height>
      </rect>
@@ -93,7 +93,7 @@
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>330</y>
+      <y>380</y>
       <width>41</width>
       <height>21</height>
      </rect>
@@ -108,11 +108,11 @@
      <string>电话</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="IdlineEdit">
+   <widget class="QLineEdit" name="NumberlineEdit">
     <property name="geometry">
      <rect>
       <x>130</x>
-      <y>80</y>
+      <y>70</y>
       <width>211</width>
       <height>31</height>
      </rect>
@@ -122,7 +122,7 @@
     <property name="geometry">
      <rect>
       <x>130</x>
-      <y>330</y>
+      <y>380</y>
       <width>211</width>
       <height>31</height>
      </rect>
@@ -132,7 +132,7 @@
     <property name="geometry">
      <rect>
       <x>130</x>
-      <y>230</y>
+      <y>280</y>
       <width>211</width>
       <height>31</height>
      </rect>
@@ -142,7 +142,7 @@
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>240</y>
+      <y>280</y>
       <width>41</width>
       <height>21</height>
      </rect>
@@ -161,7 +161,7 @@
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>280</y>
+      <y>320</y>
       <width>41</width>
       <height>31</height>
      </rect>
@@ -180,7 +180,7 @@
     <property name="geometry">
      <rect>
       <x>130</x>
-      <y>280</y>
+      <y>330</y>
       <width>211</width>
       <height>31</height>
      </rect>
@@ -189,8 +189,8 @@
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>510</y>
+      <x>340</x>
+      <y>610</y>
       <width>131</width>
       <height>41</height>
      </rect>
@@ -202,14 +202,14 @@
      </font>
     </property>
     <property name="text">
-     <string>退出系统</string>
+     <string>取消</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>390</y>
+      <y>430</y>
       <width>31</width>
       <height>21</height>
      </rect>
@@ -228,7 +228,7 @@
     <property name="geometry">
      <rect>
       <x>130</x>
-      <y>380</y>
+      <y>430</y>
       <width>211</width>
       <height>31</height>
      </rect>
@@ -238,7 +238,7 @@
     <property name="geometry">
      <rect>
       <x>130</x>
-      <y>430</y>
+      <y>480</y>
       <width>211</width>
       <height>31</height>
      </rect>
@@ -247,8 +247,8 @@
    <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>440</y>
+      <x>80</x>
+      <y>490</y>
       <width>51</width>
       <height>21</height>
      </rect>
@@ -267,7 +267,7 @@
     <property name="geometry">
      <rect>
       <x>130</x>
-      <y>180</y>
+      <y>220</y>
       <width>211</width>
       <height>31</height>
      </rect>
@@ -277,7 +277,7 @@
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>180</y>
+      <y>220</y>
       <width>41</width>
       <height>21</height>
      </rect>
@@ -292,36 +292,36 @@
      <string>性别</string>
     </property>
    </widget>
+   <widget class="QLineEdit" name="PasswordlineEdit">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>120</y>
+      <width>211</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>120</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>方正粗圆宋简体</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>密码</string>
+    </property>
+   </widget>
   </widget>
-  <widget class="QLabel" name="label_user">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>20</y>
-     <width>171</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>TextLabel</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="back">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>461</width>
-     <height>621</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>TextLabel</string>
-   </property>
-  </widget>
-  <zorder>back</zorder>
-  <zorder>label_user</zorder>
-  <zorder>widget</zorder>
  </widget>
  <resources/>
  <connections/>

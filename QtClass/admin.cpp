@@ -2,17 +2,7 @@
 #include "ui_admin.h"
 #include "login.h"
 #include "uandp.h"
-#include <QMenuBar>
-#include <QMenu>
-#include <QAction>
-#include <QDebug>
-#include <QWidget>
-#include <QPushButton>
-#include <QStatusBar>
-#include <QLabel>
-#include <QTextEdit>
-#include <QDockWidget>
-#include <QMessageBox>
+#include "headers.h"
 Admin::Admin(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Admin)
@@ -27,6 +17,8 @@ Admin::Admin(QWidget *parent) :
     ui->pushButton_3->setStyleSheet("border:none;");
     ui->pushButton_4->setStyleSheet("border:none;");
     ui->pushButton_5->setStyleSheet("border:none;");
+    //ui->label_2->setPixmap(QPixmap(":/new/prefix1/Image/Adminer.jpg"));
+     ui->label_2->setScaledContents(true);
 }
 
 Admin::~Admin()

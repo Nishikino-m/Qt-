@@ -1,18 +1,10 @@
 #ifndef ADMIN_STUDENT_H
 #define ADMIN_STUDENT_H
 
-#include <QDialog>
-#include <QSqlDatabase>
-#include <QSqlError>
-#include <QDebug>
-#include <QtSql>
-#include <QSqlQuery>
-#include <QSqlQueryModel>
-#include <QMessageBox>
-#include <QClipboard>
-#include <QMenuBar>
-#include <QMenu>
-#include <QAction>
+
+#include "add_student.h"
+#include "change_student.h"
+#include "headers.h"
 namespace Ui {
 class Admin_Student;
 }
@@ -24,7 +16,6 @@ class Admin_Student : public QDialog
 public:
     explicit Admin_Student(QWidget *parent = 0);
     ~Admin_Student();
-    studentTableShow();
 
 private slots:
     void on_pushButton_clicked();//增加学生信息
@@ -38,8 +29,8 @@ private slots:
 
 private:
     Ui::Admin_Student *ui;
-   // admin_student_add *studentAdd;//创建增加学生信息对象
-   // admin_student_updata *studentUpdate;//创建更新学生信息对象
+    Add_Student *add;//创建增加学生信息对象
+    change_student *changee;
 };
 
 #endif // ADMIN_STUDENT_H
